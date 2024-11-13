@@ -15,6 +15,7 @@ public class BaseItemManipulator : MonoBehaviour
     private BaseItem _sellectingItem = null;
     private BaseItemSpot _potentialSpot = null;
 
+
     public void UpdateSelections()
     {
         if (Physics.Raycast(_raycastOriginTransform.position, _raycastOriginTransform.forward, out RaycastHit hit, _layerMask))
@@ -50,6 +51,7 @@ public class BaseItemManipulator : MonoBehaviour
         }
     }
 
+
     public void TryUpdateItem()
     {
         if(_sellectingItem != null && _manipulatorSpot.EmptySpots > 0)
@@ -65,6 +67,7 @@ public class BaseItemManipulator : MonoBehaviour
             TryPutItem();
         }
     }
+
 
     private void TryPutItem()
     {
@@ -85,6 +88,7 @@ public class BaseItemManipulator : MonoBehaviour
             Debug.LogWarning($"{this}>>>item cant be put");
         }
     }
+
 
     private void TryReplaceItem()
     {
@@ -127,6 +131,7 @@ public class BaseItemManipulator : MonoBehaviour
             Debug.LogWarning($"{this}>>>item from manipulatot spot can't be taken");
         }
     }
+
 
     private void TryTakeItem()
     {

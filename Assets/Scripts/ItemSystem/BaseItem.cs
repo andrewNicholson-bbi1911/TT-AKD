@@ -64,27 +64,6 @@ public class BaseItem : MonoBehaviour
         }
     }
 
-    /*
-    public bool TryTakeObject()
-    {
-        if (_sellected)//this condition authomaticaly means that object is in range
-        {
-            if (_actualItemSpot?.TryTakeItem(this)??true)
-            {
-                _actualItemSpot = null;
-                transform.parent = null;
-                return true;
-            }
-
-            Debug.LogWarning("Item is linked to the wronk spot");
-            return false;
-        }
-        else
-        {
-            Debug.LogWarning("You try to take item that you're not looking at");
-            return false;
-        }
-    }*/
 
     private bool IsObjectInRange(Transform takerPosition)
         => (transform.position - (takerPosition.position + PlayerOffset))

@@ -95,6 +95,7 @@ public class ItemSpotTransformLink
     [SerializeField] private Transform _spotTransform;
     [SerializeField] private BaseItem _actualItem;
 
+
     public void UpdateItemPosition()
     {
         if(_actualItem != null)
@@ -106,7 +107,9 @@ public class ItemSpotTransformLink
         }
     }
 
+
     public bool Contains(BaseItem item) => item == _actualItem;
+
 
     public bool TryPlaceItem(BaseItem item)
     {
@@ -133,6 +136,7 @@ public class ItemSpotTransformLink
 
         return false;
     }
+
 
     public bool TryTakeItem(out BaseItem item)
     {

@@ -14,12 +14,6 @@ public class PlayerInput : MonoBehaviour
     }
 
 
-    private void OnEnable()
-    {
-        
-    }
-
-
     private void Update()
     {
         UpdateMovment();

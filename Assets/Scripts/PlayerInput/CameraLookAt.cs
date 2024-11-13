@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraLookAt : MonoBehaviour
 {
     [SerializeField] private Transform _headTransform;
     [Space]
