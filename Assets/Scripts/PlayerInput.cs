@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private CharacterController _characterController;
+    [SerializeField] private BaseItemManipulator _baseItemManipulator;
     [SerializeField] private float _defaultPlayerSpeed = 4f;
 
     private void OnValidate()
@@ -22,7 +23,11 @@ public class PlayerInput : MonoBehaviour
     private void Update()
     {
         UpdateMovment();
-        UpdateLookAt();
+        _baseItemManipulator.UpdateSelections();
+        if (Input.GetMouseButtonDown(0))
+        {
+            _baseItemManipulator.TryUpdateItem();
+        }
     }
 
 
@@ -36,10 +41,5 @@ public class PlayerInput : MonoBehaviour
         var globlTranlation = transform.localToWorldMatrix * localTranslation;
 
         _characterController.Move(globlTranlation);
-    }
-
-    private void UpdateLookAt()
-    {
-
     }
 }

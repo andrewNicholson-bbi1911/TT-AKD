@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -14,15 +12,6 @@ public class CameraFollow : MonoBehaviour
 
 
     public void Update()
-    {
-        if (_isActivated)
-        {
-            UpdateLookAtPoint();
-        }
-    }
-
-
-    public void LateUpdate()
     {
         if (_isActivated)
         {
